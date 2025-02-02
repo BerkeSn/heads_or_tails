@@ -1,0 +1,117 @@
+/* Set global font and reset margins and paddings */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+
+/* Set background color with gradient effect */
+body{
+    height: 100%;
+    background: linear-gradient(to right, #fc5185 0, #00adb5 100%) fixed;
+}
+
+/* Styling for the main game container */
+.container{
+    background-color: #fff;
+    width: 400px;
+    padding: 50px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    box-shadow: 15px 30px 35px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    perspective: 300px;
+}
+
+/* Styling for the statistics section */
+.stats{
+    text-align: right;
+    color: #101020;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+/* Coin styling, 3D transformation applied */
+.coin{
+    height: 150px;
+    width: 150px;
+    position: relative;
+    margin: 50px auto;
+    transform-style: preserve-3d;
+}
+
+/* Styling for the tails side of the coin */
+.tails{
+     transform: rotateX(180deg);
+}
+
+/* Buttons styling and alignment */
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Styling for coin images */
+.coin img{
+    width: 145px;
+}
+
+/* Front and back of the coin */
+.tails, .heads{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+/* General button styling */
+button{
+    width: 120px;
+    padding: 10px 0;
+    border: 3px solid #ff2e63;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Flip button styling */
+#flip-button{
+    background-color: #fc5185;
+    color: #fff;
+}
+
+/* Flip button disabled state */
+#flip-button:disabled{
+    background-color: #e1e0ee;
+    color: #101020;
+    border-color: #e1e0ee;
+}
+
+/* Reset button styling */
+#reset-button{
+    background-color: #fff;
+    color: #000;
+}
+
+/* Coin flip animation for tails */
+@keyframes spin-tails{
+    0%{
+        transform: rotateX(180deg);
+    }
+    100%{
+        transform: rotateX(1980deg);
+    }
+}
+
+
+/* Coin flip animation for heads */
+@keyframes spin-heads{
+    0%{
+        transform: rotateX(180deg);
+    }
+    100%{
+        transform: rotateX(1980deg);
+    }
+}
