@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heads Or Tails</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Section displaying the number of heads and tails -->
+        <div class="stats">
+            <p id="heads-count">Heads :0</p>
+            <p id="tails-count">Tails :0</p>
+        </div>
+
+        <!-- The coin element that will animate on flip -->
+        <div id="coin" class="coin">
+            <div class="heads">
+                <img src="img/reverse.png" alt="heads">
+            </div>
+            <div class="tails">
+                <img src="img/tails.png" alt="tails">
+            </div>
+        </div>
+
+        <!-- Buttons to flip the coin and reset the game -->
+        <div class="buttons">
+            <button id="flip-button">Flip</button>
+            <button id="reset-button">Reset</button>
+        </div>
+
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
